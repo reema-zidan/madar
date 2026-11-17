@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تواصل مع مدار تك للاستفسار عن البرامج التدريبية والخدمات.">
+    <title>تواصل معنا | مدار تك</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm bg-custom-dark navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html#hero" aria-label="مدار تك - الصفحة الرئيسية">
+                <img class="brand-logo" src="assets/images/madar-tech-logo.png" alt="مدار تك">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="فتح قائمة التنقل">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html#hero">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">من نحن</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">خدماتنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#programs">البرامج التدريبية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#why-madar">لماذا مدار؟</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html" aria-current="page">تواصل معنا</a></li>
+                </ul>
+                <a href="#contact-form" class="btn btn-lime text-dark fw-bold px-4 rounded-pill">أرسل رسالة</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="contact-page-banner text-white text-center">
+        <div class="container">
+            <span class="hero-eyebrow">نحن هنا لمساعدتك</span>
+            <h1 class="display-4 fw-bold text-lime mb-3">تواصل معنا</h1>
+            <p class="lead mx-auto mb-0 max-w-700">يسعدنا الإجابة عن استفساراتك ومساعدتك في اختيار البرنامج أو الخدمة المناسبة.</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact-form" class="py-5 bg-light-silver">
+            <div class="container py-lg-4">
+                <div class="row g-4 g-lg-5 align-items-stretch">
+                    <div class="col-lg-5">
+                        <div class="contact-info-panel h-100 rounded-4 p-4 p-md-5">
+                            <h2 class="h3 text-white fw-bold mb-3">خلينا نبدأ رحلتك مع بعض</h2>
+                            <p class="text-silver mb-4">أرسل لنا رسالتك أو تواصل معنا مباشرة عبر بياناتنا الرسمية.</p>
+                            <div class="contact-info-item">
+                                <span class="contact-info-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+                                <div>
+                                    <h3 class="h6 text-white fw-bold mb-1">العنوان</h3>
+                                    <p class="text-silver mb-0">خانيونس - بجانب المحكمة الشرعية</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <span class="contact-info-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+                                <div>
+                                    <h3 class="h6 text-white fw-bold mb-1">البريد الإلكتروني</h3>
+                                    <a class="text-silver text-break" href="mailto:madartech1@gmail.com">madartech1@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <span class="contact-info-icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></span>
+                                <div>
+                                    <h3 class="h6 text-white fw-bold mb-1">نحن جاهزون لمساعدتك</h3>
+                                    <p class="text-silver mb-0">املأ النموذج وسنتابع رسالتك عبر واتساب.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-3 mt-4">
+                                <a href="https://www.instagram.com/madar_tech0" target="_blank" rel="noopener noreferrer" class="text-lime fs-4" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                                <a href="https://linkedin.com/company/madartech" target="_blank" rel="noopener noreferrer" class="text-lime fs-4" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="bg-white rounded-4 shadow-sm p-4 p-md-5 h-100">
+                            <h2 class="h3 text-primary-dark fw-bold mb-2">أرسل لنا رسالة</h2>
+                            <p class="text-muted mb-4">املأ البيانات التالية، وسيتم تجهيز رسالتك للإرسال عبر واتساب.</p>
+                            <form id="whatsappForm">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label fw-semibold">الاسم</label>
+                                    <input type="text" class="form-control" id="name" name="name" autocomplete="name" required placeholder="أدخل اسمك الكامل">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label fw-semibold">البريد الإلكتروني</label>
+                                    <input type="email" class="form-control" id="email" name="email" autocomplete="email" required placeholder="example@domain.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label fw-semibold">رقم الهاتف</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" autocomplete="tel" required placeholder="059xxxxxxx">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="message" class="form-label fw-semibold">الرسالة</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" required placeholder="اكتب رسالتك هنا..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-lime text-dark fw-bold w-100 py-2 rounded-3">
+                                    <i class="fa-brands fa-whatsapp me-2" aria-hidden="true"></i>إرسال عبر الواتساب
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-custom-dark text-white py-4">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+            <a class="footer-brand-link" href="index.html#hero" aria-label="مدار تك - الصفحة الرئيسية">
+                <img class="footer-brand-logo" src="assets/images/madar-tech-logo.png" alt="مدار تك">
+            </a>
+            <a class="text-silver text-decoration-none" href="index.html">العودة إلى الرئيسية</a>
+            <span class="text-silver small">&copy; 2026 جميع الحقوق محفوظة.</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
