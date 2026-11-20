@@ -19,6 +19,51 @@ body.dashboard-body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.language-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.language-switcher button {
+    min-width: 40px;
+    padding: 0.38rem 0.55rem;
+    color: var(--dashboard-blue);
+    background: #fff;
+    border: 1px solid var(--dashboard-border);
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.language-switcher button.active {
+    color: var(--dashboard-blue);
+    background: var(--dashboard-lime);
+    border-color: var(--dashboard-lime);
+}
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    min-height: 38px;
+    padding: 0.35rem 0.7rem;
+    color: var(--dashboard-blue);
+    background: #fff;
+    border: 1px solid var(--dashboard-border);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+    background: var(--dashboard-lime);
+    border-color: var(--dashboard-lime);
+}
+
 .dashboard-sidebar {
     position: fixed;
     inset: 0 0 0 auto;
@@ -598,6 +643,15 @@ body.dashboard-body {
     text-align: center;
 }
 
+[dir="ltr"] .dashboard-sidebar {
+    inset: 0 auto 0 0;
+}
+
+[dir="ltr"] .dashboard-main {
+    margin-right: 0;
+    margin-left: 258px;
+}
+
 @media (max-width: 991.98px) {
     .dashboard-sidebar {
         position: static;
@@ -631,6 +685,7 @@ body.dashboard-body {
     .dashboard-main {
         min-height: auto;
         margin-right: 0;
+        margin-left: 0;
     }
 }
 
@@ -667,4 +722,85 @@ body.dashboard-body {
     .map-row {
         grid-template-columns: 1fr;
     }
+}
+
+html[data-theme="dark"] body.dashboard-body {
+    --dashboard-text: #e6edf3;
+    --dashboard-muted: #aab8c5;
+    --dashboard-border: #344353;
+    --dashboard-bg: #111a24;
+}
+
+html[data-theme="dark"] body.dashboard-body .editor-panel,
+html[data-theme="dark"] body.dashboard-body .draft-label,
+html[data-theme="dark"] body.dashboard-body .section-caption,
+html[data-theme="dark"] body.dashboard-body .panel-count {
+    color: var(--dashboard-text);
+    background-color: #202d3a;
+    border-color: var(--dashboard-border);
+}
+
+html[data-theme="dark"] body.dashboard-body .eyebrow,
+html[data-theme="dark"] body.dashboard-body .section-caption,
+html[data-theme="dark"] body.dashboard-body .outline-copy small,
+html[data-theme="dark"] body.dashboard-body .outline-meta,
+html[data-theme="dark"] body.dashboard-body .color-details small,
+html[data-theme="dark"] body.dashboard-body .identity-item small,
+html[data-theme="dark"] body.dashboard-body .dashboard-footer {
+    color: var(--dashboard-muted);
+}
+
+html[data-theme="dark"] body.dashboard-body .page-title,
+html[data-theme="dark"] body.dashboard-body .section-heading h2,
+html[data-theme="dark"] body.dashboard-body .panel-heading h3,
+html[data-theme="dark"] body.dashboard-body .outline-copy strong,
+html[data-theme="dark"] body.dashboard-body .color-details strong,
+html[data-theme="dark"] body.dashboard-body .identity-item strong {
+    color: #d6e5f3;
+}
+
+html[data-theme="dark"] body.dashboard-body .type-specimen,
+html[data-theme="dark"] body.dashboard-body .map-item,
+html[data-theme="dark"] body.dashboard-body .outline-icon {
+    color: var(--dashboard-text);
+    background-color: #182431;
+    border-color: var(--dashboard-border);
+}
+
+html[data-theme="dark"] body.dashboard-body .type-sample,
+html[data-theme="dark"] body.dashboard-body .map-item span,
+html[data-theme="dark"] body.dashboard-body .map-item > i {
+    color: #d6e5f3;
+}
+
+html[data-theme="dark"] body.dashboard-body .type-specimen p,
+html[data-theme="dark"] body.dashboard-body .map-item small {
+    color: var(--dashboard-muted);
+}
+
+html[data-theme="dark"] body.dashboard-body .identity-value,
+html[data-theme="dark"] body.dashboard-body .color-row code {
+    color: #b6c3d0;
+}
+
+html[data-theme="dark"] body.dashboard-body .theme-toggle {
+    color: #e6edf3;
+    background-color: #202d3a;
+    border-color: var(--dashboard-border);
+}
+
+html[data-theme="dark"] body.dashboard-body .theme-toggle:hover,
+html[data-theme="dark"] body.dashboard-body .theme-toggle:focus-visible {
+    color: var(--dashboard-blue);
+    background-color: var(--dashboard-lime);
+    border-color: var(--dashboard-lime);
+}
+
+html[data-theme="dark"] body.dashboard-body .map-hero {
+    background: var(--dashboard-blue);
+    border-color: var(--dashboard-blue);
+}
+
+html[data-theme="dark"] body.dashboard-body .map-hero small {
+    color: #d1dce5;
 }

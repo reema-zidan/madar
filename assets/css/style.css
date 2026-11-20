@@ -12,6 +12,61 @@ body {
     overflow-x: hidden;
 }
 
+.language-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-inline-start: 0.75rem;
+}
+
+.language-switcher button {
+    min-width: 40px;
+    padding: 0.38rem 0.55rem;
+    color: #fff;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.language-switcher button.active {
+    color: var(--oxford-blue);
+    background: var(--fresh-lime);
+    border-color: var(--fresh-lime);
+}
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    min-height: 38px;
+    margin-inline-start: 0.6rem;
+    padding: 0.35rem 0.7rem;
+    color: #fff;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+    color: var(--oxford-blue);
+    background: var(--fresh-lime);
+    border-color: var(--fresh-lime);
+}
+
+[dir="ltr"] .navbar-collapse {
+    direction: ltr;
+}
+
+[dir="ltr"] .language-switcher {
+    margin-inline-start: auto;
+}
+
 /* Custom Color Utilities */
 .bg-custom-dark {
     background-color: var(--oxford-blue) !important;
@@ -533,4 +588,64 @@ body {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+}
+
+html[data-theme="dark"] body {
+    color: #e6edf3;
+    background-color: #111a24;
+}
+
+html[data-theme="dark"] .bg-light-silver {
+    background-color: #182431;
+}
+
+html[data-theme="dark"] .bg-white,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .work-step-card {
+    color: #e6edf3;
+    background-color: #202d3a !important;
+}
+
+html[data-theme="dark"] .text-primary-dark {
+    color: #d6e5f3 !important;
+}
+
+html[data-theme="dark"] .text-muted,
+html[data-theme="dark"] .text-secondary,
+html[data-theme="dark"] .work-step-card p {
+    color: #b6c3d0 !important;
+}
+
+html[data-theme="dark"] .work-step-card {
+    border-color: rgba(218, 230, 242, 0.12);
+}
+
+html[data-theme="dark"] .work-step-marker {
+    color: #e6edf3;
+    background-color: #202d3a;
+}
+
+html[data-theme="dark"] .form-control {
+    color: #e6edf3;
+    background-color: #182431;
+    border-color: #435365;
+}
+
+html[data-theme="dark"] .form-control::placeholder {
+    color: #9eacba;
+}
+
+html[data-theme="dark"] .form-control:focus {
+    color: #e6edf3;
+    background-color: #182431;
+}
+
+html[data-theme="dark"] .btn-outline-dark {
+    color: #e6edf3;
+    border-color: #aab8c5;
+}
+
+html[data-theme="dark"] .btn-outline-dark:hover {
+    color: #111a24;
+    background-color: #e6edf3;
 }
