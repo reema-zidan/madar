@@ -74,44 +74,48 @@
                         <span class="panel-count">٦ أقسام</span>
                     </div>
 
-                    <div class="content-outline">
-                        <div class="outline-row">
-                            <span class="outline-number">01</span>
-                            <span class="outline-icon"><i class="fa-solid fa-images" aria-hidden="true"></i></span>
-                            <span class="outline-copy"><strong>مقدمة الصفحة — الشرائح</strong><small>عنوان، وصف، وأزرار لكل شريحة</small></span>
-                            <span class="outline-meta">٣ شرائح</span>
+                    <form id="contentEditor" class="content-editor">
+                        <fieldset>
+                            <legend>مقدمة الصفحة</legend>
+                            <label>النص فوق العنوان<input name="heroEyebrow" type="text"></label>
+                            <label>العنوان الرئيسي<input name="heroTitle" type="text"></label>
+                            <label>الوصف<textarea name="heroDescription" rows="3"></textarea></label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>من نحن</legend>
+                            <label>عنوان القسم<input name="aboutTitle" type="text"></label>
+                            <label>نبذة المؤسسة<textarea name="aboutDescription" rows="4"></textarea></label>
+                            <label>الرؤية<textarea name="vision" rows="3"></textarea></label>
+                            <label>الرسالة<textarea name="mission" rows="3"></textarea></label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>الأقسام والعناوين</legend>
+                            <label>عنوان الخدمات<input name="servicesTitle" type="text"></label>
+                            <label>عنوان البرامج التدريبية<input name="programsTitle" type="text"></label>
+                            <label>عنوان طريقة عملنا<input name="workTitle" type="text"></label>
+                            <label>عنوان لماذا مدار تك<input name="whyTitle" type="text"></label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>البرامج التدريبية</legend>
+                            <label>اسم البرنامج 1<input name="program1Title" type="text"></label>
+                            <label>وصف البرنامج 1<textarea name="program1Description" rows="2"></textarea></label>
+                            <label>اسم البرنامج 2<input name="program2Title" type="text"></label>
+                            <label>وصف البرنامج 2<textarea name="program2Description" rows="2"></textarea></label>
+                            <label>اسم البرنامج 3<input name="program3Title" type="text"></label>
+                            <label>وصف البرنامج 3<textarea name="program3Description" rows="2"></textarea></label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>التواصل</legend>
+                            <label>العنوان<input name="footerAddress" type="text"></label>
+                            <label>البريد الإلكتروني<input name="footerEmail" type="email"></label>
+                        </fieldset>
+                        <div class="editor-actions">
+                            <button type="submit" class="editor-save"><i class="fa-solid fa-floppy-disk" aria-hidden="true"></i> حفظ ونشر التغييرات</button>
+                            <button type="button" id="resetContent" class="editor-reset">استعادة النصوص الأصلية</button>
+                            <a class="editor-preview" href="../index.html" target="_blank" rel="noopener noreferrer">معاينة الموقع <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
                         </div>
-                        <div class="outline-row">
-                            <span class="outline-number">02</span>
-                            <span class="outline-icon"><i class="fa-solid fa-circle-info" aria-hidden="true"></i></span>
-                            <span class="outline-copy"><strong>من نحن</strong><small>العنوان، النبذة، الرؤية، والرسالة</small></span>
-                            <span class="outline-meta">٤ عناصر</span>
-                        </div>
-                        <div class="outline-row">
-                            <span class="outline-number">03</span>
-                            <span class="outline-icon"><i class="fa-solid fa-list-check" aria-hidden="true"></i></span>
-                            <span class="outline-copy"><strong>خدماتنا</strong><small>عنوان القسم وبطاقات الخدمات</small></span>
-                            <span class="outline-meta">٤ بطاقات</span>
-                        </div>
-                        <div class="outline-row">
-                            <span class="outline-number">04</span>
-                            <span class="outline-icon"><i class="fa-solid fa-book-open" aria-hidden="true"></i></span>
-                            <span class="outline-copy"><strong>البرامج التدريبية</strong><small>العنوان والوصف وبطاقات البرامج</small></span>
-                            <span class="outline-meta">٣ بطاقات</span>
-                        </div>
-                        <div class="outline-row">
-                            <span class="outline-number">05</span>
-                            <span class="outline-icon"><i class="fa-solid fa-star" aria-hidden="true"></i></span>
-                            <span class="outline-copy"><strong>لماذا مدار تك؟</strong><small>العنوان ونقاط تميّز المؤسسة</small></span>
-                            <span class="outline-meta">٦ نقاط</span>
-                        </div>
-                        <div class="outline-row">
-                            <span class="outline-number">06</span>
-                            <span class="outline-icon"><i class="fa-solid fa-address-card" aria-hidden="true"></i></span>
-                            <span class="outline-copy"><strong>التذييل وبيانات التواصل</strong><small>الروابط والعنوان والبريد الإلكتروني</small></span>
-                            <span class="outline-meta">تذييل</span>
-                        </div>
-                    </div>
+                        <p id="editorStatus" class="editor-status" role="status" aria-live="polite"></p>
+                    </form>
                 </article>
             </div>
 
@@ -211,6 +215,7 @@
 
         <footer class="dashboard-footer">مدار تك <span aria-hidden="true">·</span> الهيكل الأساسي للوحة تخصيص الموقع</footer>
     </main>
-        <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="assets/js/editor.js"></script>
 </body>
 </html>
